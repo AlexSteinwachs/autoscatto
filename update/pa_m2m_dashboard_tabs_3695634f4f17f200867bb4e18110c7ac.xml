@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="pa_m2m_dashboard_tabs">
+    <pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE">
+        <dashboard display_value="Autoscatto">0385234f4f17f200867bb4e18110c7aa</dashboard>
+        <home>false</home>
+        <order>1</order>
+        <sys_class_name>pa_m2m_dashboard_tabs</sys_class_name>
+        <sys_created_by>Michael.Slabodnick</sys_created_by>
+        <sys_created_on>2017-06-16 19:51:41</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3695634f4f17f200867bb4e18110c7ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>0385234f4f17f200867bb4e18110c7aa</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AutoscottoNow" source="x_snc_autoscotto">7d69460f4f13f200867bb4e18110c735</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutoscottoNow">7d69460f4f13f200867bb4e18110c735</sys_scope>
+        <sys_update_name>pa_m2m_dashboard_tabs_3695634f4f17f200867bb4e18110c7ac</sys_update_name>
+        <sys_updated_by>Michael.Slabodnick</sys_updated_by>
+        <sys_updated_on>2017-06-16 19:51:41</sys_updated_on>
+        <tab display_value="New Tab">3695634f4f17f200867bb4e18110c7aa</tab>
+    </pa_m2m_dashboard_tabs>
+</record_update>

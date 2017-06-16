@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($scope) {
+	var c = this;	
+	
+	$scope.$on('captureSysId', function(event,data) {
+		$timeout(function(){
+			c.data.capture_sysid = data.sys_id;
+			c.server.update();
+		});
+	})
+}		 
+						 
+						 
+//	c.display = function() {						
+//		c.server.update().then(function(data) {		
+//			console.log("message", data.capture_message)
+//		})		
+//	}
+	
+//	c.display();
+//}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>an_capture_message</id>
+        <internal>false</internal>
+        <link/>
+        <name>an_capture_message</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {	
+	var hashtag = " #servicenow #loveyourcustomer"
+	var twitterCharLimit = 140;
+	var maxMessageLength = twitterCharLimit - hashtag.length;
+
+	if (input && input.sometext) {
+		var messageInput = input.sometext;
+		var messageLimit = messageInput.length - maxMessageLength;
+		data.capture_message = input.sometext + hashtag + messageLimit;
+  }
+})();
+
+if (input) {
+	var p = new GlideRecord('x_snc_autoscotto_m2m_capture');
+	p.get(input.capture_sysid);
+	data.capture_user = p.user.getDisplayValue();
+}]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>aaron.isbell</sys_created_by>
+        <sys_created_on>2017-06-16 14:02:13</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a395928f13d3f2007a2c79304244b0d9</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>an_capture_message</sys_name>
+        <sys_package display_value="AutoscottoNow" source="x_snc_autoscotto">7d69460f4f13f200867bb4e18110c735</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutoscottoNow">7d69460f4f13f200867bb4e18110c735</sys_scope>
+        <sys_update_name>sp_widget_a395928f13d3f2007a2c79304244b0d9</sys_update_name>
+        <sys_updated_by>alex.steinwachs</sys_updated_by>
+        <sys_updated_on>2017-06-16 15:09:42</sys_updated_on>
+        <template><![CDATA[<div>
+ <h3>{{ c.data.capture_message }}</h3>
+ Your message:
+ <input type="text" ng-model="c.data.sometext" ng-model-options="{debounce: 50}" ng-change="c.display()"/>
+{{c.data.capture_user}}
+</div>]]></template>
+    </sp_widget>
+</record_update>

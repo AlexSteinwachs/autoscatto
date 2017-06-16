@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($rootScope,nowAttachmentHandler,$scope,$timeout,$element,$window, $location,snAttachmentHandler, $http, spUtil) {
+	/* widget controller */
+	var c = this;
+
+
+	
+	$scope.uploadNewProfilePicture = function($event) {
+		console.log($event);
+		$event.stopPropagation();
+		var $el = $element.find('input[type=file]');
+		$el.click();
+	}
+	
+	$scope.attachFiles = function(files) {
+				snAttachmentHandler.create("x_snc_autoscotto_m2m_capture", $scope.data.capture_sysid).uploadAttachment(files.files[0], {
+					sysparm_fieldname: "image"
+				}).then(function(response) {
+					console.log('Start server');
+					c.data.attachment=true;
+					c.server.update();
+					console.log('stop server');
+					});
+			}
+	
+	$scope.sendTweet = function(twitterMessage) {
+		c.data.twitterMessage = twitterMessage + ' #servicenow #loveyourcustomer ' + c.data.twitter + ' '+ c.data.userTwitter;
+		c.data.capture_sysid = $scope.data.capture_sysid;
+		c.server.update().then(function() {
+			spUtil.addTrivialMessage("Posted");
+			$window.location = "/an";
+		});
+	}
+	
+		if (!c.data.image) {
+			console.log('auto load');
+			$scope.attachFiles({files:[]});
+		}
+	
+	console.log('Client script');
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.title {
+  text-align : center;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>an_capture_account</id>
+        <internal>false</internal>
+        <link/>
+        <name>an_capture_account</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[gs.info('Server script starting');
+data.input_message = JSON.stringify(input,null,4);
+data.isLoaded = false;
+
+if ($sp.getParameter("sys_id") && !input && !data.isLoaded) {
+	loadCapture();
+} 
+if (input && input.capture_sysid && input.attachment) {
+	loadImage(input.capture_sysid);
+} 
+if (input && input.twitterMessage) {
+	postMessage(input.capture_sysid, input.twitterMessage);
+} 
+
+function loadCapture() {
+	var cc = new GlideRecord('x_snc_autoscotto_m2m_capture');
+	cc.addQuery('user',gs.getUserID());
+	cc.addQuery('account', $sp.getParameter("sys_id"));
+	cc.query();
+	data.account = {};
+	if (cc.next()){
+		data.account.name = cc.account.name.getDisplayValue();
+		data.account.logo = cc.account.logo.getDisplayValue();
+		data.isLoaded = true;
+		loadImage(cc.getValue('sys_id'));
+
+	} 
+	else {
+		var p = new GlideRecord('x_snc_autoscotto_m2m_capture');
+		p.account = $sp.getParameter("sys_id");
+		p.user = gs.getUserID();
+		data.capture_sysid = p.insert();
+		gs.info('Capture record=' + data.capture_sysid);
+		data.account.name = p.account.name.getDisplayValue();
+		data.account.logo = p.account.logo.getDisplayValue();
+		data.isLoaded = true;
+	}
+}
+
+function loadImage(sys_id) {
+	var gi = new GlideRecord('x_snc_autoscotto_m2m_capture');
+	gi.get(sys_id);
+	data.image = gi.image.getDisplayValue();
+	data.twitter = gi.account.twitter.getDisplayValue();
+	data.userTwitter = gi.user.x_snc_autoscotto_twitter.getDisplayValue();
+	data.capture_sysid = sys_id;
+}
+
+function postMessage(sys_id, message) {
+	var pm = new GlideRecord('x_snc_autoscotto_m2m_capture');
+	pm.get(sys_id);
+	pm.message = message;
+	pm.post_to_twitter = true;
+	pm.update();
+
+}
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>alex.steinwachs</sys_created_by>
+        <sys_created_on>2017-06-16 13:36:10</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>8eaf0ac34f53f200867bb4e18110c7d1</sys_id>
+        <sys_mod_count>121</sys_mod_count>
+        <sys_name>an_capture_account</sys_name>
+        <sys_package display_value="AutoscottoNow" source="x_snc_autoscotto">7d69460f4f13f200867bb4e18110c735</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutoscottoNow">7d69460f4f13f200867bb4e18110c735</sys_scope>
+        <sys_update_name>sp_widget_8eaf0ac34f53f200867bb4e18110c7d1</sys_update_name>
+        <sys_updated_by>alex.steinwachs</sys_updated_by>
+        <sys_updated_on>2017-06-16 19:07:16</sys_updated_on>
+        <template><![CDATA[
+<!--
+
+-->
+<div>
+  <div class="title text-center">
+    {{data.account.name}}
+  </div>
+  <div class="logo text-center" >
+    <img ng-src="{{c.data.account.logo}}" ng-if="data.account.logo" class="item-image"/>
+  </div>
+
+  <div class="text-center">
+    <img ng-src="{{c.data.image}}" ng-if="data.image" class="col-md-12 col-xs-12 text-center img-responsive catalog-item-image"/>
+  </div>
+  <div class="col-md-12 col-xs-12 text-center">
+    <input ng-show="false" type="file" ng-file-select="attachFiles({files: $files})" />
+
+    <button ng-click="uploadNewProfilePicture($event)" 
+            ng-keypress="uploadNewProfilePicture($event)" type="button" 
+            class="btn btn-default send-message text-center">${Upload Picture}
+    </button>
+  </div>
+
+  <div class="col-md-12 col-xs-12 text-center panel panel-primary" ng-if="data.image">
+
+    <div class="panel-heading">#servicenow #loveyourcustomer {{c.data.twitter}} {{c.data.userTwitter}}</div>
+    <div class="panel-body">
+      <textarea class="form-control" rows="5" ng-model="twitterMessage" placeholder="I love my customers!">
+      </textarea>
+    </div>
+<button ng-click="sendTweet(twitterMessage)" class="btn btn-primary btn-block">${Tweet it!}</button>
+  </div>
+<!--
+{{c.data.input_message}}  -->
+</div>
+
+
+
+
+]]></template>
+    </sp_widget>
+</record_update>

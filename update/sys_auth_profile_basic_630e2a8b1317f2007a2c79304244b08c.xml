@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_auth_profile_basic">
+    <sys_auth_profile_basic action="INSERT_OR_UPDATE">
+        <name>Twitter - AutoScottoNow</name>
+        <password>Yzk2Ph5HypV/G/OmA6YKjQb0CIjwxht43lUlNqflQDo719UMMXmcG5fB+a985D66mrjd3k6rCfM=</password>
+        <sys_class_name>sys_auth_profile_basic</sys_class_name>
+        <sys_created_by>aaron.isbell</sys_created_by>
+        <sys_created_on>2017-06-16 15:57:41</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>630e2a8b1317f2007a2c79304244b08c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Twitter - AutoScottoNow</sys_name>
+        <sys_package display_value="AutoscottoNow" source="x_snc_autoscotto">7d69460f4f13f200867bb4e18110c735</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutoscottoNow">7d69460f4f13f200867bb4e18110c735</sys_scope>
+        <sys_update_name>sys_auth_profile_basic_630e2a8b1317f2007a2c79304244b08c</sys_update_name>
+        <sys_updated_by>alex.steinwachs</sys_updated_by>
+        <sys_updated_on>2017-06-16 20:12:55</sys_updated_on>
+        <username>ePbZYI3gy6VdEx4VaGFYDDxgH</username>
+    </sys_auth_profile_basic>
+</record_update>

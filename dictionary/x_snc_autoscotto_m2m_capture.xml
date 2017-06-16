@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Capture" max_length="40" name="x_snc_autoscotto_m2m_capture" type="collection">
+        <element label="Account" max_length="32" name="account" reference="x_snc_autoscotto_account" type="reference"/>
+        <element label="Image" max_length="40" name="image" type="user_image"/>
+        <element label="Message" max_length="140" name="message" type="string"/>
+        <element label="Post to Twitter" max_length="40" name="post_to_twitter" type="boolean"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+        <index name="index2">
+            <element name="account"/>
+        </index>
+    </element>
+</database>

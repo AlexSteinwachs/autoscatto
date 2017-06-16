@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="post_to_twitter" label="Post to Twitter" language="en" table="x_snc_autoscotto_m2m_capture">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>post_to_twitter</element>
+            <help/>
+            <hint/>
+            <label>Post to Twitter</label>
+            <language>en</language>
+            <name>x_snc_autoscotto_m2m_capture</name>
+            <plural>Post to Twitters</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>alex.steinwachs</sys_created_by>
+            <sys_created_on>2017-06-16 18:19:42</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>9b80570f4fd3f200867bb4e18110c75c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Post to Twitter</sys_name>
+            <sys_package display_value="AutoscottoNow" source="x_snc_autoscotto">7d69460f4f13f200867bb4e18110c735</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="AutoscottoNow">7d69460f4f13f200867bb4e18110c735</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_autoscotto_m2m_capture_post_to_twitter_en</sys_update_name>
+            <sys_updated_by>alex.steinwachs</sys_updated_by>
+            <sys_updated_on>2017-06-16 18:19:42</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

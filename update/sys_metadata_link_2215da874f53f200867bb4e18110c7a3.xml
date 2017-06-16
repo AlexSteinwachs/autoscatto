@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>115452874f53f200867bb4e18110c71e</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_snc_autoscotto_account">
+    <x_snc_autoscotto_account action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <logo/>
+        <name>Nike</name>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2017-06-16 13:56:37</sys_created_on>
+        <sys_id>115452874f53f200867bb4e18110c71e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2017-06-16 13:56:47</sys_updated_on>
+    </x_snc_autoscotto_account>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#0</average_image_color>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <file_name>logo</file_name>
+        <image_height>400</image_height>
+        <image_width>400</image_width>
+        <size_bytes>2659</size_bytes>
+        <size_compressed>2259</size_compressed>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2017-06-16 13:56:44</sys_created_on>
+        <sys_id>9f5452874f53f200867bb4e18110c721</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2017-06-16 13:56:44</sys_updated_on>
+        <table_name>ZZ_YYx_snc_autoscotto_account</table_name>
+        <table_sys_id>115452874f53f200867bb4e18110c71e</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="logo" sys_id="9f5452874f53f200867bb4e18110c721">9f5452874f53f200867bb4e18110c721</sys_attachment>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2017-06-16 13:56:44</sys_created_on>
+        <sys_id>df5452874f53f200867bb4e18110c721</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>3000</length>
+        <position>1</position>
+        <sys_attachment display_value="logo" sys_id="9f5452874f53f200867bb4e18110c721">9f5452874f53f200867bb4e18110c721</sys_attachment>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2017-06-16 13:56:44</sys_created_on>
+        <sys_id>535452874f53f200867bb4e18110c722</sys_id>
+    </sys_attachment_doc>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2017-06-16 13:59:57</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>2215da874f53f200867bb4e18110c7a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Nike</sys_name>
+        <sys_package display_value="AutoscottoNow" source="x_snc_autoscotto">7d69460f4f13f200867bb4e18110c735</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutoscottoNow">7d69460f4f13f200867bb4e18110c735</sys_scope>
+        <sys_update_name>sys_metadata_link_2215da874f53f200867bb4e18110c7a3</sys_update_name>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2017-06-16 13:59:57</sys_updated_on>
+        <tablename>x_snc_autoscotto_account</tablename>
+    </sys_metadata_link>
+</record_update>

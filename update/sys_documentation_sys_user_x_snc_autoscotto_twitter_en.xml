@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="x_snc_autoscotto_twitter" label="Twitter" language="en" table="sys_user">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_snc_autoscotto_twitter</element>
+            <help/>
+            <hint/>
+            <label>Twitter</label>
+            <language>en</language>
+            <name>sys_user</name>
+            <plural>Twitters</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>chuck.tomasi</sys_created_by>
+            <sys_created_on>2017-06-16 18:06:24</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>2c8dcf8b4fd3f200867bb4e18110c767</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Twitter</sys_name>
+            <sys_package display_value="AutoscottoNow" source="x_snc_autoscotto">7d69460f4f13f200867bb4e18110c735</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="AutoscottoNow">7d69460f4f13f200867bb4e18110c735</sys_scope>
+            <sys_update_name>sys_documentation_sys_user_x_snc_autoscotto_twitter_en</sys_update_name>
+            <sys_updated_by>chuck.tomasi</sys_updated_by>
+            <sys_updated_on>2017-06-16 18:06:24</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

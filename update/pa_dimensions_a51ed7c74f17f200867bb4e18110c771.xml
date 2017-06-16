@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="pa_dimensions">
+    <pa_dimensions action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="sys_user">active=true<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </conditions>
+        <description/>
+        <empty_value/>
+        <facts_table>sys_user</facts_table>
+        <field>sys_id</field>
+        <manual_breakdown/>
+        <name>Autoscatto User Breakdown</name>
+        <security_type>1</security_type>
+        <sys_class_name>pa_dimensions</sys_class_name>
+        <sys_created_by>Michael.Slabodnick</sys_created_by>
+        <sys_created_on>2017-06-16 19:19:34</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a51ed7c74f17f200867bb4e18110c771</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Autoscatto User Breakdown</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AutoscottoNow" source="x_snc_autoscotto">7d69460f4f13f200867bb4e18110c735</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutoscottoNow">7d69460f4f13f200867bb4e18110c735</sys_scope>
+        <sys_update_name>pa_dimensions_a51ed7c74f17f200867bb4e18110c771</sys_update_name>
+        <sys_updated_by>Michael.Slabodnick</sys_updated_by>
+        <sys_updated_on>2017-06-16 19:19:34</sys_updated_on>
+    </pa_dimensions>
+    <sys_translated_text action="delete_multiple" query="documentkey=a51ed7c74f17f200867bb4e18110c771"/>
+</record_update>

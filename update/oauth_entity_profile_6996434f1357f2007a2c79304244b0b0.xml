@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="oauth_entity_profile">
+    <oauth_entity_profile action="INSERT_OR_UPDATE">
+        <default>true</default>
+        <grant_type>client_credentials</grant_type>
+        <name>Twitter - Hackathon default_profile</name>
+        <oauth_entity display_value="Twitter - Hackathon">6755c70f1357f2007a2c79304244b081</oauth_entity>
+        <sys_class_name>oauth_entity_profile</sys_class_name>
+        <sys_created_by>aaron.isbell</sys_created_by>
+        <sys_created_on>2017-06-16 17:36:10</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>6996434f1357f2007a2c79304244b0b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Twitter - Hackathon default_profile</sys_name>
+        <sys_package display_value="AutoscottoNow" source="x_snc_autoscotto">7d69460f4f13f200867bb4e18110c735</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutoscottoNow">7d69460f4f13f200867bb4e18110c735</sys_scope>
+        <sys_update_name>oauth_entity_profile_6996434f1357f2007a2c79304244b0b0</sys_update_name>
+        <sys_updated_by>aaron.isbell</sys_updated_by>
+        <sys_updated_on>2017-06-16 17:36:10</sys_updated_on>
+    </oauth_entity_profile>
+</record_update>
